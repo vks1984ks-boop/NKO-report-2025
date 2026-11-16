@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Анализ отчётности НКО за 2025 год</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --page: #F4F6F9;
+      --surface: #FFFFFF;
+      --header: #17365A;
+      --text: #263445;
+      --accent: #245A92;
+      --muted: #566477;
+      --line: #DCE3EB;
+      --conclusions: #F7F9FC;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--text);
+      font-family: Inter, system-ui, sans-serif;
+      font-size: 1rem;
+      line-height: 1.55;
+    }
+
+    main {
+      container-type: inline-size;
+      max-width: 84rem;
+      margin-inline: auto;
+      padding: clamp(2rem, 5vw, 4.5rem) clamp(1rem, 4vw, 3rem);
+    }
+
+    h1 {
+      margin: 0 0 1.5rem;
+      color: var(--header);
+      font-size: clamp(1.85rem, 4.2vw, 3rem);
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: -0.035em;
+      text-wrap: balance;
+    }
+
+    .scroll-hint {
+      display: none;
+      margin: 0 0 0.65rem;
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+
+    .table-scroll {
+      overflow-x: auto;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 0.75rem;
+      box-shadow: 0 6px 24px rgb(23 54 90 / 5%);
+    }
+
+    .table-scroll:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    table {
+      width: 100%;
+      min-width: 48rem;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    .indicator-column { width: 25%; }
+    .results-column { width: 38%; }
+    .conclusions-column { width: 37%; }
+
+    th,
+    td {
+      padding: 1.125rem clamp(1rem, 2vw, 1.625rem);
+      text-align: left;
+      vertical-align: top;
+      overflow-wrap: anywhere;
+    }
+
+    thead th {
+      background: var(--header);
+      color: var(--surface);
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    thead th + th {
+      border-inline-start: 1px solid rgb(255 255 255 / 16%);
+    }
+
+    tbody th,
+    tbody td {
+      border-block-start: 1px solid var(--line);
+    }
+
+    tbody th {
+      font-weight: 600;
+    }
+
+    tbody td:last-child {
+      background: var(--conclusions);
+      border-inline-start: 1px solid var(--line);
+    }
+
+    tbody p {
+      margin: 0;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+
+    .accent {
+      color: var(--accent);
+    }
+
+    .report-pages {
+      margin-block-start: 0.55rem;
+      color: var(--muted);
+      font-size: 0.8125rem;
+      line-height: 1.4;
+    }
+
+    @container (width < calc(48rem + 2px)) {
+      .scroll-hint {
+        display: block;
+      }
+
+      h1 {
+        margin-block-end: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1 id="report-title">Анализ отчётности НКО за 2025 год</h1>
+    <p class="scroll-hint">Прокрутите таблицу вправо</p>
+    <div class="table-scroll" role="region" tabindex="0" aria-labelledby="report-title">
+      <table aria-labelledby="report-title">
+        <colgroup>
+          <col class="indicator-column">
+          <col class="results-column">
+          <col class="conclusions-column">
+        </colgroup>
+        <thead>
+          <tr>
+            <th scope="col">Показатель</th>
+            <th scope="col">Что показала отчётность</th>
+            <th scope="col">Вывод финансового директора и что проверить</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Коммерческая деятельность — продажи</th>
+            <td>
+              <p>Выручка выросла с <strong>184,9 до 225,7</strong> (+22%). Прибыль от продаж — с <strong>55,0 до 77,0</strong> (+40%). Рентабельность продаж выросла с <strong>29,7% до 34,1%</strong>.</p>
+              <p class="report-pages">Стр. 10, 18.</p>
+            </td>
+            <td>На каждые 100 ₽ выручки АНО получила 34 ₽ прибыли от продаж. Чтобы подтвердить рентабельность отдельных мероприятий, нужно проверить, как между коммерческими договорами и целевыми сметами распределяются общие расходы на команду и подрядчиков.</td>
+          </tr>
+          <tr>
+            <th scope="row">Коммерческая деятельность — зависимость от одного форума</th>
+            <td>
+              <p>Услуги по организации форума «Россия — Исламский мир» и обеспечению пребывания его участников дали <strong>191,6</strong> выручки, или <strong class="accent">84,9%</strong> всей коммерческой выручки. Отдельно услуги по обеспечению пребывания дали валовой убыток <strong class="accent">0,45</strong>.</p>
+              <p class="report-pages">Стр. 10–11, 15.</p>
+            </td>
+            <td>Общий результат сильно зависит от договоров по одному форуму. Перед следующим мероприятием стоит отдельно пересчитать смету на пребывание участников и выяснить, какие затраты привели к убытку.</td>
+          </tr>
+          <tr>
+            <th scope="row">Чистая прибыль и процентные доходы</th>
+            <td>
+              <p>Чистая прибыль выросла с <strong>63,8 до 87,6</strong> (+37%). Проценты к получению выросли с <strong>11,4 до 34,9</strong> и составили <strong>33,2% прибыли до налогообложения</strong>. Курсовые расходы за 2025 год — <strong>5,2</strong>.</p>
+              <p class="report-pages">Стр. 18–19.</p>
+            </td>
+            <td>При прогнозировании следующего года стоит отдельно рассчитывать прибыль от мероприятий и процентные доходы. Тогда будет видно, сколько организация заработает при изменении ставок по депозитам.</td>
+          </tr>
+          <tr>
+            <th scope="row">Уставная деятельность — источники финансирования</th>
+            <td>
+              <p>Добровольные имущественные взносы и пожертвования выросли с <strong>696,9 до 1 711,3</strong>. Это <strong>95,1%</strong> всех поступлений, отражённых в отчёте о целевом использовании средств.</p>
+              <p class="report-pages">Стр. 21.</p>
+            </td>
+            <td>Основной источник финансирования уставной деятельности значительно вырос. В выгрузке нет разбивки по донорам. Для бюджета следующего года нужно сверить суммы и сроки подтверждённого финансирования по каждому крупному мероприятию.</td>
+          </tr>
+          <tr>
+            <th scope="row">Уставная деятельность — расходы</th>
+            <td>
+              <p>Расходы на целевые мероприятия выросли с <strong>835,5 до 1 681,2</strong>. Из них <strong>1 458,2</strong>, или <strong>86,7%</strong>, отражено по статье «проведение конференций, совещаний, семинаров и т. п.». Содержание аппарата управления выросло с <strong>13,7 до 26,0</strong>, а его доля в общем использовании средств снизилась с <strong>1,6% до 1,5%</strong>.</p>
+              <p class="report-pages">Стр. 21–22.</p>
+            </td>
+            <td>Сравнить утверждённые сметы с фактическими расходами по крупнейшим форумам. Перед сравнением статей с 2024 годом стоит проверить, одинаково ли расходы относили к конференциям и к прочим целевым мероприятиям.</td>
+          </tr>
+          <tr>
+            <th scope="row">Остаток целевых средств</th>
+            <td>
+              <p>Остаток по отчёту вырос с <strong>176,6 до 265,6</strong> (+50%). Между строкой 6400 отчёта и строкой 1330 баланса есть разница <strong>1 тыс. ₽</strong>.</p>
+              <p class="report-pages">Стр. 6, 21–22.</p>
+            </td>
+            <td>Нужна расшифровка остатка по каждому источнику и проекту. Она покажет, какие суммы уже предназначены для будущих расходов и по каким средствам договор предусматривает возврат. Разницу в 1 тыс. ₽ стоит сверить по данным учёта до округления.</td>
+          </tr>
+          <tr>
+            <th scope="row">Ликвидность и депозиты</th>
+            <td>
+              <p>На конец 2025 года на счетах было <strong>45,7</strong>, на депозитах — <strong>153,5</strong>, в том числе <strong>17,7</strong> на валютных. Краткосрочные обязательства — <strong>16,8</strong>. Деньги на счетах покрывают их в <strong class="accent">2,7 раза</strong>. Заёмные средства в балансе отсутствуют.</p>
+              <p class="report-pages">Стр. 5–8.</p>
+            </td>
+            <td>Покрытие обязательств на отчётную дату высокое. Перед бронированием площадок и выплатой авансов подрядчикам нужно сопоставить даты платежей со сроками возврата депозитов и условиями использования целевых средств.</td>
+          </tr>
+          <tr>
+            <th scope="row">Дебиторская задолженность и незавершённые работы</th>
+            <td>
+              <p>Дебиторская задолженность выросла с <strong>8,9 до 64,4</strong>. Крупнейшие позиции — расчёты с поставщиками и подрядчиками <strong>34,9</strong>, сальдо ЕНС <strong>17,8</strong>, прочие расчёты <strong>11,8</strong>. Незавершённое производство выросло с <strong>1,2 до 17,4</strong>.</p>
+              <p class="report-pages">Стр. 3, 5.</p>
+            </td>
+            <td>По расчётам с подрядчиками стоит сверить авансы, сроки оказания услуг и получения актов. По незавершённым работам — проверить, какие проекты действительно перешли на 2026 год и по каким завершённым мероприятиям ещё требуется закрыть затраты.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>
